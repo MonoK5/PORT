@@ -39,7 +39,7 @@ body{
 }
 
 .wave-text span:nth-child(1) {
-    animation-delay: 5s;
+    animation-delay: 0s;
 }
 
 .wave-text span:nth-child(2) {
