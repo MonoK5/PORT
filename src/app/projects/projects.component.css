@@ -12,11 +12,13 @@ body{
     display: flex;
     justify-content: center; /* Centers horizontally */
     align-items: center;     /* Centers vertically */
-    background-color: #f0f0f0; /* Optional: Set background color */
+    background-color: #000000; /* Optional: Set background color */
 }
 
 .wave-container {
     text-align: center;
+  
+ 
 }
 
 .wave-text {
@@ -24,12 +26,16 @@ body{
     display: inline-block;
     font-size: 4em;
     font-weight: bold;
+    color: #fff;
+ 
+    
 }
 
 .wave-text span {
     display: inline-block;
     opacity: 0;
     animation: wave 5s ease-in-out infinite;
+   
 }
 
 .wave-text span:nth-child(1) {
@@ -78,6 +84,7 @@ body{
 
 *
 {
+ 
   margin: 0;
   padding: 0;
   box-sizing: border-box;

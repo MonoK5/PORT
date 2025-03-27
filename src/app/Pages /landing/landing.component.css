@@ -1,110 +1,178 @@
-
+/* Basic Body Style */
 body {
-    font-family: Arial, sans-serif;
-   
-   
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
+/* Landing Page Section */
 .landing {
-    height: 100vh;
-    background-image: url(https://images.unsplash.com/photo-1544239265-ee5eedde5469?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1520583457224-aee11bad5112?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    background-size: cover;
-    background-position: center;
-    color: rgb(255, 255, 255);
-    padding: 0px;
-    margin: 0px;
-
+  height: 100vh;
+  background-image: url(https://images.unsplash.com/photo-1544239265-ee5eedde5469?q=80&w=2864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dhttps://images.unsplash.com/photo-1520583457224-aee11bad5112?q=80&w=2865&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  color: rgb(255, 255, 255);
+  padding: 0px;
+  margin: 0px;
 }
 
+/* Overlay Effect */
 .landing .overlay {
-
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
+/* Content Section */
 .landing .content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
+/* Heading Style */
 .landing h1 {
-    font-size: 3em;
-    margin-bottom: 0.5em;
+  font-size: 3em;
+  margin-bottom: 0.5em;
 }
 
+/* Paragraph Style */
 .landing p {
-    font-size: 1.5em;
-    margin-bottom: 1.5em;
+  font-size: 1.5em;
+  margin-bottom: 1.5em;
 }
 
+/* Button Style */
 .landing .btn {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    background-color: #000000;
-    border-color: #000000;
- 
+  padding: 10px 20px;
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #000000;
+  border-color: #000000;
 }
 
 .landing .btn:hover {
-    background-color:  #006600
+  background-color: #006600;
 }
 
+/* Matrix Button Style */
+.btn {
+  position: relative;
+  padding: 1.5rem 3rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
 
+/* Matrix Button Specific Styling */
+.matrix {
+  background: #000;
+  border: 2px solid #0f0;
+  color: #0f0;
+}
 
+/* Code Rain Animation */
+.code-rain {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 0, 0) 0%,
+    rgba(0, 255, 0, 0.2) 50%,
+    rgba(0, 255, 0, 0) 100%
+  );
+  opacity: 0;
+  transition: 0.3s;
+}
 
-  
-  .btn {
-    position: relative;
-    padding: 1.5rem 3rem;
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.4s ease;
-  }
-  
-  .matrix {
-    background: #000;
-    border: 2px solid #0f0;
-    color: #0f0;
-  }
-  
-  .code-rain {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 255, 0, 0) 0%,
-      rgba(0, 255, 0, 0.2) 50%,
-      rgba(0, 255, 0, 0) 100%
-    );
-    opacity: 0;
-    transition: 0.3s;
-  }
-  
-  .matrix:hover .code-rain {
-    opacity: 1;
-    animation: rain 1s linear infinite;
-  }
-  
-  @keyframes rain {
-    0% {
+.matrix:hover .code-rain {
+  opacity: 1;
+  animation: rain 1s linear infinite;
+}
+
+/* Rain Animation */
+@keyframes rain {
+  0% {
       transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(100%);
-    }
   }
+  100% {
+      transform: translateY(100%);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  /* Landing Section */
+  .landing {
+      height: 80vh; /* Reduce height to fit mobile screens */
+      background-size: cover;
+      background-position: center;
+  }
+
+  /* Content */
+  .landing .content {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+  }
+
+  /* Heading */
+  .landing h1 {
+      font-size: 2em; /* Smaller font size for mobile */
+      margin-bottom: 0.5em;
+  }
+
+  /* Paragraph */
+  .landing p {
+      font-size: 1.2em; /* Adjust font size for mobile */
+      margin-bottom: 1em;
+  }
+
+  /* Button */
+  .landing .btn {
+      padding: 8px 16px; /* Smaller padding for mobile */
+      font-size: 1rem; /* Adjust button size */
+  }
+
+  /* Matrix Button */
+  .btn {
+      padding: 1rem 2rem; /* Reduce padding for mobile */
+      font-size: 1rem; /* Reduce font size */
+  }
+
+  /* Code Rain Animation */
+  .matrix:hover .code-rain {
+      animation: rain 1.5s linear infinite; /* Slower animation for mobile */
+  }
+}
+
+/* Very Small Screens (Phones in Portrait Mode) */
+@media (max-width: 480px) {
+  /* Heading */
+  .landing h1 {
+      font-size: 1.5em; /* Further reduce font size */
+  }
+
+  /* Paragraph */
+  .landing p {
+      font-size: 1.1em; /* Adjust font size further */
+  }
+
+  /* Button */
+  .landing .btn {
+      padding: 6px 12px; /* Further reduce padding for very small screens */
+      font-size: 0.9rem; /* Further reduce font size */
+  }
+}
+
   

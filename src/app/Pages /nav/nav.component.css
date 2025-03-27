@@ -22,6 +22,7 @@ html {
   margin: 0;
 }
 
+/* Navigation Bar */
 nav {
   display: flex;
   align-items: center;
@@ -30,22 +31,23 @@ nav {
   border-radius: 70px;
   top: 0;
   width: 100%;
-  height: 60px; 
-  background: #000000; 
-  z-index: 10; 
-  padding: 0 px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  height: 60px;
+  background: #000000;
+  z-index: 10;
+  padding: 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Logo */
 .logo img {
-  width: 50px; /* Set size of the logo */
-  height: 50px; /* Maintain aspect ratio */
+  width: 50px;
+  height: 50px;
   color: #fdfeff;
   background-color: #fdfeff;
   border-radius: 50px;
 }
 
+/* Menu Styling */
 .menu {
   display: flex;
   justify-content: center;
@@ -55,27 +57,24 @@ nav {
   margin: 0;
 }
 
-
 .menu li {
   width: 120px;
-  height: 100%; 
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: background-position-x 0.9s linear;
   text-align: center;
   position: relative;
-  margin-right: 90px; 
+  margin-right: 90px;
 }
 
-
 .menu li a {
-  font-size: 20px; 
+  font-size: 20px;
   color: #ffffff;
   text-decoration: none;
   transition: all 0.45s;
 }
-
 
 .menu li:hover {
   background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsbmtpPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0aD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
@@ -83,7 +82,7 @@ nav {
 }
 
 .menu li:hover a {
-  color:  #006600;
+  color: #006600;
 }
 
 /* Animation for the hover effect */
@@ -93,3 +92,68 @@ nav {
   }
 }
 
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack the logo and menu vertically */
+    padding: 10px 0;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    display: none; /* Initially hide the menu */
+  }
+
+  .menu li {
+    width: 100%; /* Make each item full width on mobile */
+    margin-right: 0;
+    margin-bottom: 10px; /* Add spacing between menu items */
+  }
+
+  .menu li a {
+    font-size: 18px; /* Reduce font size for mobile */
+    padding: 10px 0;
+  }
+
+  .logo img {
+    width: 40px; /* Smaller logo for mobile */
+    height: 40px;
+  }
+
+  /* Hamburger Menu */
+  .hamburger {
+    display: block; /* Display hamburger icon */
+    cursor: pointer;
+    width: 35px;
+    height: 25px;
+    position: relative;
+  }
+
+  .hamburger div {
+    background-color: #ffffff;
+    height: 4px;
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  /* When hamburger menu is clicked */
+  .menu.open {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Very Small Screens (e.g., Portrait Mobile) */
+@media (max-width: 480px) {
+  .menu li a {
+    font-size: 16px; /* Further reduce font size */
+  }
+
+  .logo img {
+    width: 35px; /* Even smaller logo for smaller screens */
+    height: 35px;
+  }
+}

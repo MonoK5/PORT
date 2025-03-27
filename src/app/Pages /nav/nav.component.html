@@ -1,18 +1,31 @@
 <nav>
-    <div class="logo">
-        <a [routerLink]="'/'">
-            <img src="https://cdn-icons-png.flaticon.com/128/9731/9731436.png" alt="Logo">
-          </a>
-          
-    </div>
-    
-    <ul class="menu">
-      <li><a [routerLink]="'/'" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/12259/12259403.png" alt="Contacts Icon" height="30px" width="30px"><br>Home</a></li>
-      <li><a [routerLink]="'/about'" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/17694/17694131.png" alt="Contacts Icon" height="30px" width="30px"><br>About</a></li>
-      <li><a [routerLink]="'/skills'" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/17494/17494630.png" alt="Contacts Icon" height="30px" width="30px"><br>Skills</a></li>
-      <li><a [routerLink]="'/projects'" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/16780/16780193.png" alt="Contacts Icon" height="30px" width="30px"><br>Projects </a></li>
-      <li><a [routerLink]="'/contact'" class="btn"><img src="https://cdn-icons-png.flaticon.com/128/552/552489.png" alt="Contacts Icon" height="30px" width="30px"><br>Contacts</a></li>
-
-    </ul>
-  </nav>
+  <div class="logo">
+    <a [routerLink]="'/'">
+      <img src="https://cdn-icons-png.flaticon.com/128/9731/9731436.png" alt="Logo">
+    </a>
+  </div>
   
+  <!-- Hamburger Icon -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Menu Items -->
+  <ul class="menu">
+    <li><a [routerLink]="'/'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/12259/12259403.png" alt="Home Icon" height="30px" width="30px"><br>Home</a></li>
+    <li><a [routerLink]="'/about'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/17694/17694131.png" alt="About Icon" height="30px" width="30px"><br>About</a></li>
+    <li><a [routerLink]="'/skills'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/17494/17494630.png" alt="Skills Icon" height="30px" width="30px"><br>Skills</a></li>
+    <li><a [routerLink]="'/projects'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/16780/16780193.png" alt="Projects Icon" height="30px" width="30px"><br>Projects</a></li>
+    <li><a [routerLink]="'/contact'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/552/552489.png" alt="Contact Icon" height="30px" width="30px"><br>Contact</a></li>
+  </ul>
+</nav>
+
+<!-- JavaScript to Toggle Menu -->
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('open');
+  }
+</script>

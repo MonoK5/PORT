@@ -8,5 +8,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './nav.component.css'
 })
 export class NavComponent {
-
+  
+  toggleMenu(): void {
+    const menu = document.querySelector('click');
+    menu?.classList.toggle('hidden');
+  }
 }
+
+

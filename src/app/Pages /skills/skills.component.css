@@ -12,14 +12,12 @@
     color: #ffffff;
 }
 
-
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 boxes per row */
-    gap: 50px; /* Add some space between boxes */
+    grid-template-columns: repeat(3, 1fr); /* Default: 3 boxes per row */
+    gap: 50px; /* Space between boxes */
     padding: 0 30px;
 }
-
 
 .skill-box {
     background: hsl(0, 0%, 100%);
@@ -30,22 +28,19 @@
     position: relative;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    width: 350px;
+    width: 350px; /* Fixed width for larger screens */
 }
-
 
 .skill-box img {
     margin-bottom: 15px;
     transition: transform 0.3s ease;
 }
 
-
 .skill-box p {
     font-size: 1.5em;
     color: #000000;
     font-weight: 500;
 }
-
 
 .skill-box:hover {
     transform: scale(1.1);
@@ -58,7 +53,6 @@
 .skill-box:hover img {
     transform: rotate(15deg);
 }
-
 
 @keyframes holographic {
     0% {
@@ -73,14 +67,39 @@
 }
 
 /* Media Queries for Responsiveness */
+
+/* For tablets and smaller screens (≤ 768px) */
 @media (max-width: 768px) {
     .skills-grid {
         grid-template-columns: repeat(1, 1fr); /* One box per row on small screens */
     }
     .skill-box {
         padding: 30px;
+        width: 90%; /* Make each skill box take up most of the width */
+        margin: 0 auto; /* Center skill boxes */
     }
     .skill-box p {
-        font-size: 1.2em;
+        font-size: 1.2em; /* Slightly smaller font size on smaller screens */
+    }
+}
+
+/* For smaller screens (≤ 480px), like portrait mode on phones */
+@media (max-width: 480px) {
+    .skills h2 {
+        font-size: 2em; /* Smaller heading font size */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr); /* One box per row */
+        padding: 0 20px; /* Reduced padding */
+    }
+
+    .skill-box {
+        width: 100%; /* Full width of the container */
+        padding: 20px;
+    }
+
+    .skill-box p {
+        font-size: 1.1em; /* Further reduced font size */
     }
 }

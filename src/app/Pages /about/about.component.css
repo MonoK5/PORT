@@ -1,91 +1,137 @@
-
-
-  
+/* About Section Styles */
 .about-section {
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .about-content {
-    max-width: 1500px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
 
-  .about-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #ffffff;
-  }
-  
+.about-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+/* Heading Styling */
+.about-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+/* Cards Container */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Card Styles */
+.card {
+  background-color: #ffffff;
+  border: 2px solid #006600;
+  border-radius: 10px;
+  width: 580px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Header Styling */
+.card-header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+/* Card Body Styling */
+.card-body {
+  padding: 20px;
+  font-size: 1.1em;
+  color: #333;
+  line-height: 1.6;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card-body ul li {
+  margin: 10px 0;
+}
+
+.card-body ul li strong {
+  color: #000000;
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with max width of 768px (Tablets and smaller screens) */
+@media (max-width: 768px) {
+  .about-section {
+      padding: 20px; /* Add some padding on smaller devices */
+  }
+
+  /* Cards container will stack vertically on small devices */
   .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-  }
-  
-
-  .card {
-    background-color: #ffffff;
-    border: 2px solid  #006600;
-    border-radius: 10px;
-    width: 580px;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .card-header {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 20px;
-    text-align: center;
-    font-size: 1.6em;
-    font-weight: bold;
-  }
-  
-  .card-body {
-    padding: 20px;
-    font-size: 1.1em;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  .card-body ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .card-body ul li {
-    margin: 10px 0;
-  }
-  
-  .card-body ul li strong {
-    color: #000000;
-  }
-  
-  /* Hover Effects */
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Media Query for Responsiveness */
-  @media (max-width: 768px) {
-    .cards-container {
       flex-direction: column;
       align-items: center;
-    }
-    
-    .card {
-      width: 50%;
-    }
   }
-  
+
+  /* Card width will adjust to 100% for mobile */
+  .card {
+      width: 90%;
+      margin-bottom: 20px; /* Space between cards */
+  }
+
+  /* Adjust header font size on smaller screens */
+  .card-header {
+      font-size: 1.4em;
+  }
+
+  /* Adjust body font size for readability */
+  .card-body {
+      font-size: 1em;
+  }
+}
+
+/* For devices with max width of 480px (Small Phones) */
+@media (max-width: 480px) {
+  .about-section {
+      padding: 15px; /* Reduce padding */
+  }
+
+  /* Further reduce card width */
+  .card {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+  /* Reduce font size for headings */
+  .about-section h2 {
+      font-size: 2em;
+  }
+
+  /* Reduce card header font size */
+  .card-header {
+      font-size: 1.2em;
+  }
+
+  /* Adjust card body font size for small screens */
+  .card-body {
+      font-size: 0.9em;
+  }
+}

@@ -1,5 +1,4 @@
-
-
+/* Base Footer Style */
 footer {
     padding: 20px 0;
     background-color: #000000;
@@ -7,6 +6,29 @@ footer {
     text-align: center;
 }
 
+/* Footer Paragraph Style */
 footer p {
-    font-size: 1em;
+    font-size: 1em; /* Default font size */
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0; /* Slightly reduced padding for tablets and smaller screens */
+    }
+
+    footer p {
+        font-size: 0.9em; /* Slightly smaller font size for mobile devices */
+    }
+}
+
+/* Further adjustments for very small screens (like phones in portrait mode) */
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 0; /* Smaller padding for very small screens */
+    }
+
+    footer p {
+        font-size: 0.85em; /* Reduce font size even more for very small screens */
+    }
 }
