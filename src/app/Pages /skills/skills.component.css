@@ -1,0 +1,86 @@
+
+.skills {
+    padding: 20px 0;
+    color: #ffffff;
+    text-align: center;
+    background-color: #000000;
+}
+
+.skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #ffffff;
+}
+
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 boxes per row */
+    gap: 50px; /* Add some space between boxes */
+    padding: 0 30px;
+}
+
+
+.skill-box {
+    background: hsl(0, 0%, 100%);
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 350px;
+}
+
+
+.skill-box img {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+
+.skill-box p {
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: 500;
+}
+
+
+.skill-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(45deg, rgb(0, 124, 25), rgba(0, 189, 54, 0.2), rgb(0, 152, 33));
+    background-size: 400% 400%;
+    animation: holographic 2s linear infinite;
+}
+
+.skill-box:hover img {
+    transform: rotate(15deg);
+}
+
+
+@keyframes holographic {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr); /* One box per row on small screens */
+    }
+    .skill-box {
+        padding: 30px;
+    }
+    .skill-box p {
+        font-size: 1.2em;
+    }
+}

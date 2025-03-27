@@ -1,0 +1,211 @@
+
+    .contact h2 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+    
+    .contact a {
+        color:  #006600;
+        text-decoration: none;
+    }
+    
+    .contact a:hover {
+        color: #e10000;
+    }
+    
+    .contact-container {
+        display: grid; /* Use CSS Grid */
+        grid-template-columns: repeat(3, 1fr); /* 2 cards per row */
+        gap: 0px; /* Space between the cards */
+        padding: 10px;
+        justify-items: center; /* Center the cards within each grid cell */
+    }
+    
+    .contact-card {
+        width: 200px; /* Set the width of each card */
+        padding: 30px;
+        margin: 10px; /* Space between the cards */
+        border: 1px solid #0f0;
+        border-radius: 10px;
+        background-color: #000000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        animation: bounce 2s infinite; /* Apply the bounce animation */
+    }
+    
+    .contact-card:hover {
+        transform: translateY(-5px); /* Slight lift effect on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .contact-card p {
+        margin: 10px 0;
+    }
+    
+    .contact-card a {
+        color: #006600;
+        text-decoration: none;
+    }
+    
+    .contact-card a:hover {
+        text-decoration: underline;
+    }
+    
+  
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0); /* Cards in their original position */
+        }
+        50% {
+            transform: translateY(-10px); /* Cards bounce upwards */
+        }
+    }
+    
+    /* Ensures the grid layout clears properly */
+    .contact-container::after {
+        content: "";
+        clear: both; /* Clear the floats (no longer necessary with grid) */
+        display: table;
+    }
+    
+
+    .card {
+        width: 200px;
+        height: 250px;
+        /* margin: 1rem auto; */
+        perspective: 1000px;
+        cursor: pointer;
+        
+       
+      }
+      
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      
+      .card:hover .card-inner {
+        transform: rotateY(180deg);
+      }
+      
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+      }
+      
+      .card-front {
+        background: rgb(0, 0, 0);
+        border: 1px solid #000000;
+      }
+      
+      .card-back {
+        background: #000000;
+        color: rgb(0, 0, 0);
+        transform: rotateY(180deg);
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card {
+    width: 300px;
+    height: 250px;
+    margin: 1rem auto;
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition for smooth effects */
+  }
+
+  .card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+ 
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+ 
+  .card-front {
+    background: rgb(0, 0, 0);
+    border: 1px solid #000000;
+  }
+
+  .card-back {
+    background: #000000;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+  
+  .card:hover {
+    animation: pulse 1s infinite, bounce 2s infinite; /* Apply pulse and bounce on hover */
+    transform: translateY(-5px); /* Float effect on hover */
+  }
+  
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1); 
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0); /* The card returns to its original position */
+    }
+    50% {
+      transform: translateY(-10px); /* Bounce effect */
+    }
+  }
+  .heading{
+    color: #ffffff;
+    text-align: center;
+    
+  }
