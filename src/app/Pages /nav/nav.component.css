@@ -37,13 +37,15 @@ nav {
   padding: 0px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+.logo{
+  margin-left: 150px; 
+}
 
-/* Logo */
 .logo img {
-  width: 50px;
-  height: 50px;
-  color: #fdfeff;
-  background-color: #fdfeff;
+  width: 30px;
+  height: 30px;
+  color: #000000;
+  background-color: #ffffff;
   border-radius: 50px;
 }
 
@@ -117,10 +119,7 @@ nav {
     padding: 10px 0;
   }
 
-  .logo img {
-    width: 40px; /* Smaller logo for mobile */
-    height: 40px;
-  }
+
 
   /* Hamburger Menu */
   .hamburger {
@@ -152,8 +151,5 @@ nav {
     font-size: 16px; /* Further reduce font size */
   }
 
-  .logo img {
-    width: 35px; /* Even smaller logo for smaller screens */
-    height: 35px;
-  }
+  
 }
