@@ -97,21 +97,21 @@ nav {
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   nav {
-    flex-direction: column; /* Stack the logo and menu vertically */
-    padding: 10px 0;
+    flex-direction: row; /* Stack the logo and menu vertically */
+    padding: 20px 0;
   }
 
   .menu {
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     margin-top: 20px;
-    display: flex; /* Initially hide the menu */
+    display: none; /* Initially hide the menu */
   }
 
   .menu li {
     width: 100%; /* Make each item full width on mobile */
     margin-right: 0;
-    margin-bottom: 10px; /* Add spacing between menu items */
+    margin-bottom: 30px; /* Add spacing between menu items */
   }
 
   .menu li a {
