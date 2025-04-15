@@ -1,16 +1,23 @@
 <nav>
   <div class="logo">
     <a [routerLink]="'/'">
-      <img src="https://cdn-icons-png.flaticon.com/128/11867/11867875.png" alt="Logo" height="150px" width="150px"><br>
+      <img src="https://cdn-icons-png.flaticon.com/128/11867/11867875.png" alt="Logo">
     </a>
   </div>
- 
-  <ul class="menu">
-    <li><a [routerLink]="'/'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/12259/12259403.png" alt="Home Icon" height="30px" width="30px"><br>Home</a></li>
-    <li><a [routerLink]="'/about'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/17694/17694131.png" alt="About Icon" height="30px" width="30px"><br>About</a></li>
-    <li><a [routerLink]="'/skills'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/17494/17494630.png" alt="Skills Icon" height="30px" width="30px"><br>Skills</a></li>
-    <li><a [routerLink]="'/projects'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/16780/16780193.png" alt="Projects Icon" height="30px" width="30px"><br>Projects</a></li>
-    <li><a [routerLink]="'/contact'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/552/552489.png" alt="Contact Icon" height="30px" width="30px"><br>Contact</a></li>
+
+  <!-- Hamburger for mobile -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <ul class="menu" [ngClass]="{ 'open': menuOpen }" #menu>
+    <li><a [routerLink]="'/'" (click)="toggleMenu()">Home</a></li>
+    <li><a [routerLink]="'/about'" (click)="toggleMenu()">About</a></li>
+    <li><a [routerLink]="'/skills'" (click)="toggleMenu()">Skills</a></li>
+    <li><a [routerLink]="'/projects'" (click)="toggleMenu()">Projects</a></li>
+    <li><a [routerLink]="'/contact'" (click)="toggleMenu()">Contact</a></li>
   </ul>
 </nav>
-
