@@ -105,7 +105,7 @@ nav {
     flex-direction: column;
     width: 100%;
     margin-top: 20px;
-    display: none; /* Initially hide the menu */
+    display: flex; /* Initially hide the menu */
   }
 
   .menu li {
@@ -123,11 +123,11 @@ nav {
 
   /* Hamburger Menu */
   .hamburger {
-    display: block; /* Display hamburger icon */
+    display: flex; /* Display hamburger icon */
     cursor: pointer;
     width: 35px;
     height: 25px;
-    position: relative;
+    position: absolute;
   }
 
   .hamburger div {
