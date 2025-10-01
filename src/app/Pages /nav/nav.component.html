@@ -5,14 +5,14 @@
     </a>
   </div>
 
-  <!-- 🔽 Hamburger icon for mobile -->
+ 
   <div class="hamburger" (click)="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
   </div>
 
-  <!-- 🔽 Updated menu with responsive toggle -->
+
   <ul class="menu" [ngClass]="{ 'open': menuOpen }">
     <li><a [routerLink]="'/'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/12259/12259403.png" alt="Home Icon" height="30px" width="30px"><br>Home</a></li>
     <li><a [routerLink]="'/about'" class="btn" (click)="toggleMenu()"><img src="https://cdn-icons-png.flaticon.com/128/17694/17694131.png" alt="About Icon" height="30px" width="30px"><br>About</a></li>
