@@ -180,6 +180,12 @@ body
   background: linear-gradient(45deg, rgb(0, 124, 25), rgba(0, 189, 54, 0.2), rgb(0, 152, 33));
 }
 
+.container .box:nth-child(4):before,
+.container .box:nth-child(4):after
+{
+  background: linear-gradient(45deg, rgb(0, 124, 25), rgba(0, 189, 54, 0.2), rgb(0, 152, 33));
+}
+
 
 
 .container .box span
